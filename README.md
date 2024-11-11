@@ -26,23 +26,24 @@ Machine Learning: Predicting Views from YouTube Video Titles Using Bi-LSTM Train
 - Word2Vec / Doc2Vec
 
 ## 專案結構
-- _Doc2Vec_visualization.py：使用 Doc2Vec 技術將影片標題向量化，並透過 t-SNE 進行可視化。
-- _get_top50_YouTube.py：透過 YouTube API 抓取台灣地區熱門影片的頻道資訊。
-- _Word2Vec_visualization_3D.py：將 Word2Vec 結果以 3D 散點圖顯示，並匯出動畫 GIF。
-- github_getdata.py：資料前處理函數，包括斷詞、簡繁轉換等操作。
-- github_predict.py：使用訓練好的 Bi-LSTM 模型進行點閱率預測。
-- model_F.py：定義數據處理和模型訓練流程，並保存模型以供後續預測使用。
 - Youtube_Crawler.py：從指定頻道抓取影片資訊，包括影片 ID、標題、發布時間、觀看次數等，並儲存至 CSV 檔案。
+- _get_top50_YouTube.py：透過 YouTube API 抓取台灣地區熱門影片的頻道資訊。
+- github_getdata.py：資料前處理函數，包括斷詞、簡繁轉換等操作。
+- model_F.py：定義數據處理和模型訓練流程，並保存模型以供後續預測使用。
+- _Word2Vec_visualization_3D.py：將 Word2Vec 結果以 3D 散點圖顯示，並匯出動畫 GIF。
+- _Doc2Vec_visualization.py：使用 Doc2Vec 技術將影片標題向量化，並透過 t-SNE 進行可視化。
+- github_predict.py：使用訓練好的 Bi-LSTM 模型進行點閱率預測。
+
 
 ## 使用方法
-1. 抓取熱門頻道資料
+### 1. 抓取熱門頻道資料
 使用 Youtube_Crawler.py 抓取台灣地區熱門影片的頻道資訊：
 
 ```bash
 python Youtube_Crawler.py
 ```
 
-2. 訓練並保存 LSTM 模型
+### 2. 訓練並保存 LSTM 模型
 運行 model_F.py 進行 Bi-LSTM 模型訓練，並將模型保存為 LSTM_model.h5：
 
 ```bash
@@ -53,7 +54,7 @@ python model_F.py
 ![image](https://github.com/user-attachments/assets/be25a08b-48d6-4ef1-83ca-1ad6567fb052)
 
 
-3. 可視化詞向量
+### 3. 可視化詞向量
 透過 _Doc2Vec_visualization.py 或 _Word2Vec_visualization_3D.py 進行詞向量的 2D 或 3D 視覺化：
 
 ```bash
@@ -68,7 +69,7 @@ python _Doc2Vec_visualization.py
 ![_Doc2Vec_visualization](https://github.com/user-attachments/assets/97c9521b-743b-4759-a347-b0249448085b)
 
 
-4. 預測 YouTube 點閱率
+### 4. 預測 YouTube 點閱率
 在 github_predict.py 中輸入頻道 ID 和影片 ID，使用訓練好的模型進行點閱率預測：
 
 ```bash
