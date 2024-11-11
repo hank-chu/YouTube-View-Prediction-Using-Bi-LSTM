@@ -48,6 +48,10 @@ python Youtube_Crawler.py
 ```bash
 python model_F.py
 ```
+![image](https://github.com/user-attachments/assets/9a76ba0d-6b4c-4040-9a49-f478ce6934f3)
+
+![image](https://github.com/user-attachments/assets/be25a08b-48d6-4ef1-83ca-1ad6567fb052)
+
 
 3. 可視化詞向量
 透過 _Doc2Vec_visualization.py 或 _Word2Vec_visualization_3D.py 進行詞向量的 2D 或 3D 視覺化：
@@ -56,6 +60,10 @@ python model_F.py
 python _Doc2Vec_visualization.py
 python _Word2Vec_visualization_3D.py
 ```
+![_Word2Vec_visualization_3D](https://github.com/user-attachments/assets/ec44359f-48dd-45e3-9bca-dfe913b62331)
+
+![_Doc2Vec_visualization](https://github.com/user-attachments/assets/97c9521b-743b-4759-a347-b0249448085b)
+
 
 4. 預測 YouTube 點閱率
 在 github_predict.py 中輸入頻道 ID 和影片 ID，使用訓練好的模型進行點閱率預測：
@@ -63,13 +71,11 @@ python _Word2Vec_visualization_3D.py
 ```bash
 python github_predict.py
 ```
+![預測](https://github.com/user-attachments/assets/7749be08-698e-4416-a3f9-e87a44396f7a)
+
+
 
 ## 結果分析
 該模型在影片標題、發布時間和訂閱數的綜合因素下，能夠有效預測影片的觀看數。最佳模型顯示了標題文本向量、時間因素和頻道訂閱數對預測準確度的重要性。
 
-## 文件目錄
-YT_output.csv：影片標題和頻道資訊的數據集，用於斷詞和向量化。
-doc2Vec.jpg、word2Vec_gif.gif：詞向量 2D 和 3D 視覺化輸出。
 
-## 技術細節
-此專案採用了 NLP 技術和 Bi-LSTM 深度學習模型來預測 YouTube 影片的觀看數。利用 ckiptagger 斷詞和 Word2Vec / Doc2Vec 向量化技術生成詞向量，再將詞向量與影片發佈時間、訂閱數整合到 Bi-LSTM 模型中進行時間序列預測。
