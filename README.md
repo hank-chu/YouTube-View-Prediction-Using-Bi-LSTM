@@ -16,16 +16,14 @@ Machine Learning: Predicting Views from YouTube Video Titles Using Bi-LSTM Train
 
 高準確度：多個模型測試中，最佳模型在標題、時間和訂閱數的綜合因素下，能達到良好的預測準確度。
 
-## 關鍵字
-YouTube Data Analysis
+## 關鍵字 / Keywords
+- YouTube Data Analysis
 
-NLP
+- NLP
 
-Bi-LSTM
+- Bi-LSTM
 
-Word2Vec / Doc2Vec
-
-時間序列預測
+- Word2Vec / Doc2Vec
 
 ## 專案結構
 _Doc2Vec_visualization.py：使用 Doc2Vec 技術將影片標題向量化，並透過 t-SNE 進行可視化。
